@@ -1,0 +1,62 @@
+@import "compass"
+@import "compass/reset"
+@import "colors"
+@import "formatting"
+
+body
+  margin: 0
+  padding: 0
+  font-family: Chivo, sans-serif
+  background: $black
+  color: $beige
+  +transition(background-color 0.5s)
+  font-size: 62.5%
+  letter-spacing: -0.05rem
+  &.debug .step.active
+    outline: 5px solid rgba(255,255,255,0.7)
+
+a
+  text-decoration: none
+  color: inherit
+
+b, strong, .bold
+  font-weight: bold
+
+.caps
+  text-transform: uppercase
+
+.step
+  width: 900px
+  height: 700px
+  padding: 40px
+  font-size: 48px
+  margin: 20px auto
+  +box-sizing(border-box)
+  line-height: 1.5
+  text-align: center
+  img
+    max-width: 100%
+    max-height: 100%
+
+.meme
+  -webkit-text-stroke: 5px black
+  font-size: 96px
+  font-weight: bold
+  text-transform: uppercase
+  color: white
+  line-height: 75%
+  p:first-child
+    position: absolute
+    text-align: center
+    top: 10%
+    width: 100%
+    color: white
+    z-index: 10
+  p:last-child
+    position: absolute
+    text-align: center
+    bottom: 10%
+    width: 100%
+    z-index: 10
+
+@import "steps"
